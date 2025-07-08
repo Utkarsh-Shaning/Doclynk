@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Doclynk</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .about-container {
+      max-width: 900px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    }
+
+    .title {
+      font-size: 54px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00f0ff, #00ffd5, #5f9bff);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 6s ease-in-out infinite;
+    }
+
+    @keyframes glowText {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #cceeff;
+    }
+
+    .description strong {
+      color: #00f0ff;
+    }
+
+    .back-button {
+      margin-top: 40px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00f0ff;
+      color: #000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #00c6d6;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 36px;
+      }
+
+      .about-container {
+        padding: 20px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="about-container">
+    <h1 class="title">About Doclynk</h1>
+
+    <p class="description">
+      <strong>Doclynk</strong> is a lightweight yet powerful patient management system built to simplify healthcare data workflows.<br/><br/>
+      With Doclynk, you can:<br/>
+      • 📝 Add and update patient records<br/>
+      • 🔍 View, search, and sort patients effortlessly<br/>
+      • 📊 Calculate BMI and generate instant health verdicts<br/>
+      • ⚡ Enjoy fast performance using FastAPI + MongoDB + JS
+      <br/><br/>
+      Whether you're a doctor, assistant, student, or developer — Doclynk helps you focus more on care, less on code.
+    </p>
+
+    <button class="back-button" onclick="window.location.href='index.html'">⬅ Back to Home</button>
+  </div>
+</body>
+</html>
