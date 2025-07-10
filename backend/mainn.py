@@ -34,11 +34,11 @@ def serve_about():
     return FileResponse(FRONTEND_DIR / "about.html")
 
 @app.get("/status")
-def status():
+def check_db():
     try:
         client.admin.command("ping")
         return {"status": "MongoDB connected ✅"}
-    except:
+    except Exception:
         return {"status": "MongoDB not connected ❌"}
 
 
